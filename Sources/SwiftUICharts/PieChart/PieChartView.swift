@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct PieChartView : View {
     public var data: [Double]
-    public var title: String
+    public var title: Text
     public var legend: String?
     public var style: ChartStyle
     public var formSize:CGSize
@@ -33,9 +33,7 @@ public struct PieChartView : View {
                 .shadow(color: self.style.dropShadowColor, radius: self.dropShadow ? 12 : 0)
             VStack(alignment: .leading){
                 HStack{
-                    Text(self.title)
-                        .font(.headline)
-                        .foregroundColor(self.style.textColor)
+                    self.title
                     Spacer()
                     Image(systemName: "chart.pie.fill")
                         .imageScale(.large)
