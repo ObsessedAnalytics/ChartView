@@ -56,7 +56,7 @@ public struct PieChartView : View {
 #if DEBUG
 struct PieChartView_Previews : PreviewProvider {
     static var previews: some View {
-        PieChartView(data:[56,78,53,65,54], title: "Title", legend: "Legend")
+        PieChartView(data:[56,78,53,65,54], title: Text("Title"), legend: "Legend")
     }
 }
 #endif
